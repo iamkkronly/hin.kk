@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastery Code - Software Engineering Program</title>
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #00cec9;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--dark), #1e272e);
+            color: var(--light);
+            perspective: 1000px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            transform-style: preserve-3d;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            transform: translateZ(50px);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .badge {
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            transform: translateZ(30px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .badge:hover {
+            transform: translateZ(30px) scale(1.05);
+        }
+        
+        .course-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+        
+        .course-card:hover {
+            transform: rotateY(10deg) rotateX(5deg) translateZ(20px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            transform: translateZ(40px);
+        }
+        
+        .phase {
+            background: rgba(0,0,0,0.3);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            transform: translateZ(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .phase:hover {
+            transform: translateZ(30px);
+            background: rgba(0,0,0,0.4);
+        }
+        
+        .phase h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .phase ul {
+            padding-left: 20px;
+        }
+        
+        .phase li {
+            margin: 8px 0;
+        }
+        
+        .contact-box {
+            text-align: center;
+            padding: 40px;
+            background: rgba(108, 92, 231, 0.1);
+            border-radius: 20px;
+            margin: 60px 0;
+            backdrop-filter: blur(10px);
+            transform: translateZ(50px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            transform: translateZ(40px);
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateZ(40px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+        
+        .testimonials {
+            display: flex;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .testimonial {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+        
+        .testimonial:hover {
+            transform: rotateY(5deg) translateZ(20px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .badges {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>The Mastery Code</h1>
+            <p class="tagline">Zero to Software Engineer - Premium Immersive Program</p>
+            <div class="badges">
+                <div class="badge">🎓 Certification</div>
+                <div class="badge">💼 Real Projects</div>
+                <div class="badge">👨‍💻 1:1 Mentorship</div>
+            </div>
+        </header>
+        
+        <div class="course-card">
+            <h2>20-Week Transformative Curriculum</h2>
+            
+            <div class="phase">
+                <h3>Phase 1: Engineering Foundations (4 Weeks)</h3>
+                <ul>
+                    <li>Master Python/Java/JavaScript</li>
+                    <li>Data Structures & Algorithms</li>
+                    <li>Problem-solving techniques</li>
+                </ul>
+            </div>
+            
+            <div class="phase">
+                <h3>Phase 2: Backend Development (4 Weeks)</h3>
+                <ul>
+                    <li>Build production-ready APIs</li>
+                    <li>Database design principles</li>
+                    <li>Payment system project</li>
+                </ul>
+            </div>
+            
+            <div class="phase">
+                <h3>Phase 3: Scalable Architectures (4 Weeks)</h3>
+                <ul>
+                    <li>Microservices design</li>
+                    <li>Performance optimization</li>
+                    <li>E-commerce scaling strategies</li>
+                </ul>
+            </div>
+            
+            <div class="phase">
+                <h3>Phase 4: Industry Projects (4 Weeks)</h3>
+                <ul>
+                    <li>Food delivery tracking system</li>
+                    <li>Digital KYC solution</li>
+                    <li>High-volume booking engine</li>
+                </ul>
+            </div>
+            
+            <div class="phase">
+                <h3>Phase 5: Career Preparation (4 Weeks)</h3>
+                <ul>
+                    <li>Resume optimization</li>
+                    <li>Mock interviews</li>
+                    <li>Final challenge</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="contact-box">
+            <h2>Ready to Transform Your Career?</h2>
+            <p>Next cohort starts November 1, 2024</p>
+            <p>Limited seats available</p>
+            <a href="https://wa.me/917439431956" class="whatsapp-btn">Contact on WhatsApp</a>
+        </div>
+        
+        <h2 style="text-align: center;">What Our Learners Say</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"The projects helped me transition to a ₹14LPA backend role!"</p>
+                <p><strong>- Rahul, IIT Bombay</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"The mentorship was crucial for cracking my Amazon interviews."</p>
+                <p><strong>- Priya, DTU Delhi</strong></p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2024 The Mastery Code. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add 3D parallax effect
+        document.addEventListener('mousemove', (e) => {
+            const container = document.querySelector('.container');
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            container.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+        
+        // Reset position when mouse leaves
+        document.querySelector('.container').addEventListener('mouseleave', (e) => {
+            e.target.style.transform = 'rotateY(0deg) rotateX(0deg)';
+        });
+    </script>
+</body>
+</html>
